@@ -1,0 +1,60 @@
+﻿<Window x:Class="Lista7_2.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Lista7_2"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800" Background=" DarkBlue">
+    <Window.Resources>
+        <Style TargetType="{x:Type Button}">
+            <!-- Default Values -->
+            <Setter Property="Background" Value="#000000FF"/>
+            <Setter Property="BorderBrush" Value="#000000FF"/>
+            <Setter Property="Opacity" Value="0.5"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Background" Value="#000000FF"/>
+                    <Setter Property="Button.Opacity" Value="1" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+    </Window.Resources>
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.Resources>
+            <ImageBrush x:Key="Holly4Path" ImageSource="/Holly.png" Viewport="0,0,20,20" ViewportUnits="Absolute" TileMode="Tile" />
+        </Grid.Resources>
+        <Border Grid.ColumnSpan="2"
+        BorderBrush="{StaticResource Holly4Path}"
+        Grid.RowSpan="2" Margin="20" BorderThickness="22" CornerRadius="40">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0,0" EndPoint="0,1">
+                    <GradientStop Color="DarkBlue" Offset="0" />
+                    <GradientStop Color="Blue" Offset="0.2" />
+                    <GradientStop Color="White" Offset="1.0" />
+                </LinearGradientBrush>
+            </Border.Background>
+            <Image Source="ChristmasTree.png"  Margin="199,49,-157,0"/>
+        </Border>
+        <Image Name="lamp1" Source="/lampka.png" Margin="162,225,214,147" Grid.Column="1"/>
+        <Image Name="lamp2" Source="/lampka.png" Margin="200,270,176,102" Grid.Column="1"/>
+        <Image Name="lamp3" Source="/lampka.png" Margin="134,278,242,94" Grid.Column="1"/>
+        <Image Name="lamp4" Source="/lampka.png" Margin="174,180,202,192" Grid.Column="1"/>
+        <Image Name="star" Source="/star2.png"   Margin="123,67,155,292" Grid.Column="1">
+            <Image.Style>
+                <Style TargetType="{x:Type Image}">
+                    <Setter Property="Opacity" Value="0.5"/>
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Opacity" Value="1" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+    </Grid>
+</Window>
