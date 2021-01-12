@@ -7,17 +7,13 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800" Background=" DarkBlue">
     <Window.Resources>
-        <Style TargetType="{x:Type Button}">
-            <!-- Default Values -->
-            <Setter Property="Background" Value="#000000FF"/>
-            <Setter Property="BorderBrush" Value="#000000FF"/>
-            <Setter Property="Opacity" Value="0.5"/>
-            <Style.Triggers>
-                <Trigger Property="IsMouseOver" Value="True">
-                    <Setter Property="Background" Value="#000000FF"/>
-                    <Setter Property="Button.Opacity" Value="1" />
-                </Trigger>
-            </Style.Triggers>
+        <Style x:Key="CommonStyle" TargetType="Control" >
+            <Setter Property="Margin" Value="2"/>
+            <Setter Property="FontSize" Value="20pt" />
+        </Style>
+        <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
+        </Style>
+        <Style TargetType="Label" BasedOn="{StaticResource CommonStyle}">
         </Style>
     </Window.Resources>
     <Grid>
@@ -44,17 +40,19 @@
         <Image Name="lamp2" Source="/lampka.png" Margin="200,270,176,102" Grid.Column="1"/>
         <Image Name="lamp3" Source="/lampka.png" Margin="134,278,242,94" Grid.Column="1"/>
         <Image Name="lamp4" Source="/lampka.png" Margin="174,180,202,192" Grid.Column="1"/>
-        <Image Name="star" Source="/star2.png"   Margin="123,67,155,292" Grid.Column="1">
+        <Image Name="star" Source="/star2.png"   Margin="123,67,160,292" Grid.Column="1">
             <Image.Style>
                 <Style TargetType="{x:Type Image}">
                     <Setter Property="Opacity" Value="0.5"/>
                     <Style.Triggers>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Opacity" Value="0.9" />
+                            <Setter Property="Opacity" Value="1" />
                         </Trigger>
                     </Style.Triggers>
                 </Style>
             </Image.Style>
         </Image>
+        <TextBox Grid.Column="0" Width="250" Height="50" Background="#0000008B" BorderBrush="#0000008B">Wesołych Świąt</TextBox>
+        <Label Grid.Column="0" Margin="99,124,143,263" Content="Wesołych Świąt2"/>
     </Grid>
 </Window>

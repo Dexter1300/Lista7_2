@@ -26,6 +26,12 @@ namespace Lista7_2
         {
             InitializeComponent();
             BlinkingLamps(lamp1);
+            k = k + 500;
+            BlinkingLamps(lamp2);
+            k = k + 500;
+            BlinkingLamps(lamp3);
+            k = k + 500;
+            BlinkingLamps(lamp4);
         }
         public void BlinkingLamps(Image image)
         {
