@@ -25,13 +25,18 @@ namespace Lista7_2
         public MainWindow()
         {
             InitializeComponent();
+            k = k + 250;
             BlinkingLamps(lamp1);
-            k = k + 500;
+            k = k + 250;
             BlinkingLamps(lamp2);
-            k = k + 500;
+            k = k + 250;
             BlinkingLamps(lamp3);
-            k = k + 500;
+            k = k + 250;
             BlinkingLamps(lamp4);
+            k = k + 250;
+            BlinkingLamps(lamp5);
+            k = k + 250;
+            BlinkingLamps(lamp6);
         }
         public void BlinkingLamps(Image image)
         {
