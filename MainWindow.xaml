@@ -9,7 +9,9 @@
     <Window.Resources>
         <Style x:Key="CommonStyle" TargetType="Control" >
             <Setter Property="Margin" Value="2"/>
-            <Setter Property="FontSize" Value="20pt" />
+            <Setter Property="FontSize" Value="21pt"/>
+            <Setter Property="FontFamily" Value="Comic Sans MS"/>
+            <Setter Property="Foreground" Value="White"/>
         </Style>
         <Style TargetType="TextBox" BasedOn="{StaticResource CommonStyle}">
         </Style>
@@ -52,7 +54,7 @@
                 </Style>
             </Image.Style>
         </Image>
-        <TextBox Grid.Column="0" Width="250" Height="50" Background="#0000008B" BorderBrush="#0000008B">Wesołych Świąt</TextBox>
-        <Label Grid.Column="0" Margin="99,124,143,263" Content="Wesołych Świąt2"/>
+        <TextBox Grid.Column="0" Background="#0000008B" BorderBrush="#0000008B" TextChanged="TextBox_TextChanged" Margin="39,217,0,153" Text="Szczęśliwego Nowego Roku" HorizontalAlignment="Left" Width="380" Grid.ColumnSpan="2" />
+        <Label Grid.Column="0" Margin="50,135,10,125" Content="        Wesołych Świąt&#xD;&#xA;&#x9;      i"/>
     </Grid>
 </Window>

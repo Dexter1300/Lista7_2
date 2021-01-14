@@ -50,5 +50,10 @@ namespace Lista7_2
             Storyboard.SetTargetProperty(opacityAnimation, new PropertyPath("Opacity"));
             storyboard.Begin(image);
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
